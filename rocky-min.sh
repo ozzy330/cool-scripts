@@ -1,4 +1,4 @@
-# rocky-min v1.2
+# rocky-min v1.3
 sudo dnf install epel-release -y && sudo dnf update -y &&\
 sudo dnf install git neovim wget go screen bash-completion fontconfig unzip tar -y &&\
 wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.3.0/FiraCode.zip &&\
@@ -7,6 +7,15 @@ rm -f FiraCode.zip &&\
 curl -sS https://starship.rs/install.sh | sh &&\
 echo "eval "$(starship init bash)"" >> ~/.bashrc
 sudo dnf install openssh-server -y
-mkdir ~/.config/nvim/ -p && echo -e 'vim.opt.expandtab=true\nvim.opt.tabline=2\nvim.opt.tabstop=2\nvim.opt.mouse=""' | tee ~/.config/nvim/init.lua
+mkdir ~/.config/nvim/ -p && echo \
+"
+vim.o.hlsearch = false
+vim.o.mouse = ''
+vim.o.tabstop = 2
+vim.o.shiftwidth = 2
+vim.o.undofile = true
+vim.o.ignorecase = true
+vim.o.smartcase = true
+"\ | tee ~/.config/nvim/init.lua
 sudo systemctl enable sshd
 sudo systemctl start sshd
