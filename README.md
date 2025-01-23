@@ -1,2 +1,7 @@
-# rocky-defaults
-Bash script to add sane defaults to Rocky Linux
+# Collection os useful sh scripts
+
+## <distro>-min
+Minimal configuration for the distro
+
+## <distro>-igpu
+Configuration for intel igpu
