@@ -1,7 +1,7 @@
-# fedora-min v1.1
+# fedora-min v1.2
 sudo dnf update -y &&\
 sudo dnf install git neovim wget go screen bash-completion fontconfig unzip tar -y &&\
-curl -L ozzy330.com/shell > .bashrc
+curl -L ozzy330.com/shell > ~/.bashrc
 sudo dnf install openssh-server -y
 mkdir ~/.config/nvim/ -p && echo \
 "
