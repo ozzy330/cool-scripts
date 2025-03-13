@@ -1,6 +1,6 @@
-# alpine-igpu v1.0
-sudo apk update
+# alpine-igpu v1.1
+apk update
 
 # Install Intel drivers and related utilities for Broadwell (5th gen) or newer
-sudo apk add intel-media-driver libva-utils igt-gpu-tools
+apk add intel-media-driver libva-utils igt-gpu-tools
 
